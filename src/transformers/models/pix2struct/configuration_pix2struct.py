@@ -371,6 +371,7 @@ class Pix2StructConfig(PretrainedConfig):
             vision_config = {}
             logger.info("vision_config is None. Initializing the Pix2StructVisionConfig with default values.")
 
+        text_config["is_decoder"] = True
         self.text_config = Pix2StructTextConfig(**text_config)
         self.vision_config = Pix2StructVisionConfig(**vision_config)
 
